@@ -14,7 +14,6 @@ class EditAnimeGirlPage extends StatefulWidget {
 }
 
 class _EditAnimeGirlPageState extends State<EditAnimeGirlPage> {
-  late TextEditingController _idController;
   late TextEditingController _nameController;
   late TextEditingController _descriptionController;
   late TextEditingController _imagePathController;
@@ -24,7 +23,6 @@ class _EditAnimeGirlPageState extends State<EditAnimeGirlPage> {
   @override
   void initState() {
     super.initState();
-    _idController = TextEditingController(text: widget.animeGirl?.id ?? '');
     _nameController = TextEditingController(text: widget.animeGirl?.name ?? '');
     _descriptionController = TextEditingController(text: widget.animeGirl?.description ?? '');
     _imagePathController = TextEditingController(text: widget.animeGirl?.imagePath ?? '');
@@ -32,7 +30,6 @@ class _EditAnimeGirlPageState extends State<EditAnimeGirlPage> {
 
   @override
   void dispose() {
-    _idController.dispose();
     _nameController.dispose();
     _descriptionController.dispose();
     _imagePathController.dispose();
@@ -51,8 +48,9 @@ class _EditAnimeGirlPageState extends State<EditAnimeGirlPage> {
   }
 
   void _save() {
+    final id = widget.animeGirl?.id ?? DateTime.now().millisecondsSinceEpoch.toString();
     final AnimeGirl animeGirl = AnimeGirl(
-      id: _idController.text,
+      id: id,
       name: _nameController.text,
       description: _descriptionController.text,
       imagePath: _imagePathController.text,
@@ -73,11 +71,6 @@ class _EditAnimeGirlPageState extends State<EditAnimeGirlPage> {
         padding: const EdgeInsets.all(20.0),
         child: Column(
           children: [
-            TextField(
-              controller: _idController,
-              decoration: const InputDecoration(labelText: 'ID'),
-            ),
-            const SizedBox(height: 10),
             TextField(
               controller: _nameController,
               decoration: const InputDecoration(labelText: 'Name'),
