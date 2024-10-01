@@ -2,6 +2,5 @@
 Хлынин Роман Олегович ЭФБО-02-22
 
 
-
-https://github.com/user-attachments/assets/bfd5e0df-a7c4-4c19-9b60-94ac72269fac
+https://github.com/user-attachments/assets/531b807d-ff37-4203-914e-baaf0120c9f4
 
