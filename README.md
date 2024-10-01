@@ -1,11 +1,7 @@
-# pr4
 Практическая работа 4
 Хлынин Роман Олегович ЭФБО-02-22
 
 
 
-![2024-10-01 09-55-10.mov](my_video.mov)
+https://github.com/user-attachments/assets/bfd5e0df-a7c4-4c19-9b60-94ac72269fac
 
-<video controls>
-  <source src="2024-10-01 09-55-10.mov" type="video/mp4">
-</video>
